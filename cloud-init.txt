@@ -13,8 +13,7 @@ yum_repos:
     # See: man yum.conf
     #
     # This one is required!
-    # baseurl: http://download.example/pub/epel/7/$basearch
-    metalink: https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch&infra=$infra&content=$contentdir
+    baseurl: https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch&infra=$infra&content=$contentdir
     enabled: true
     failovermethod: priority
     gpgcheck: true
