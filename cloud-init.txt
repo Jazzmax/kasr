@@ -19,3 +19,14 @@ yum_repos:
     gpgcheck: true
     gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
     name: Extra Packages for Enterprise Linux 7 - $basearch
+  salt:
+    baseurl: https://repo.saltproject.io/py3/redhat/7/x86_64/3004
+    enabled: true
+    enabled_metadata: 1
+    skip_if_unavailable: true
+    failovermethod: priority
+    gpgcheck: true
+    gpgkey: https://repo.saltproject.io/py3/redhat/7/x86_64/3004/SALTSTACK-GPG-KEY.pub, https://repo.saltproject.io/py3/redhat/7/x86_64/3004/base/RPM-GPG-KEY-CentOS-7
+    name: Salt repo for RHEL/CentOS 7 PY3
+
+
