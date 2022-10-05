@@ -13,7 +13,7 @@ yum_repos:
     # See: man yum.conf
     #
     # This one is required!
-    baseurl: https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch&infra=$infra&content=$contentdir
+    baseurl: https://mirror.serverion.com/epel/7/x86_64/
     enabled: true
     failovermethod: priority
     gpgcheck: true
