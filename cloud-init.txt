@@ -28,5 +28,14 @@ yum_repos:
     gpgcheck: true
     gpgkey: https://repo.saltproject.io/py3/redhat/7/x86_64/3004/SALTSTACK-GPG-KEY.pub, https://repo.saltproject.io/py3/redhat/7/x86_64/3004/base/RPM-GPG-KEY-CentOS-7
     name: Salt repo for RHEL/CentOS 7 PY3
-
+# Install and configure salt-minion
+salt_minion:
+    pkg_name: 'salt-minion'
+    service_name: 'salt-minion'
+    config_dir: '/etc/salt'
+    conf:
+        master: salt
+    grains:
+        roles:
+            - kasr-rhel
 
