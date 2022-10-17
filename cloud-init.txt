@@ -34,7 +34,7 @@ salt_minion:
     service_name: 'salt-minion'
     config_dir: '/etc/salt'
     conf:
-        master: salt
+        master: 10.178.26.175
     grains:
         roles:
             - kasr-rhel
