@@ -17,7 +17,7 @@ yum_repos:
     enabled: true
     failovermethod: priority
     gpgcheck: true
-    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+    gpgkey: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
     name: Extra Packages for Enterprise Linux 7 - $basearch
   salt:
     baseurl: https://repo.saltproject.io/py3/redhat/7/x86_64/3004
