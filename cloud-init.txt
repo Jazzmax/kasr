@@ -37,5 +37,12 @@ salt_minion:
         master: 10.178.26.175
     grains:
         roles:
-            - kasr-rhel
+            - kasr-rhel-ch
+runcmd:
+  - pvcreate /dev/sdc
+  - vgcreate varvg /dev/sdc
+  - lvcreate -l+100%FREE -n varlocal varvg
+  - mkfs.xfs /dev/mapper/varvg-varlocal
+mounts:
+  - [ /dev/mapper/varvg-varlocal, /var/local, "xfs", "defaults,nofail", "0", "0" ]
 
